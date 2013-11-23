@@ -6,6 +6,11 @@
   <h2><%= customer.full_name %></h2>
   <p><%= image_tag customer.image, :width => '256' %></p>
   <p><strong>Phone: </strong><%= customer.phone_number %></p>
+  <% if customer.province %>
+    <p><strong>Province: </strong><%= customer.province.name %></p>
+  <% else %>
+
+  <% end %>
   <p><strong>Email: </strong><%= customer.email_address %></p>
   <p><strong>Notes: </strong><%= customer.notes %></p>
 </div>
