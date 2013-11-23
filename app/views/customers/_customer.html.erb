@@ -1,11 +1,11 @@
-<section class="contact">
+<div class="contact">
   <div class="links">
     <%= link_to 'edit', edit_customer_path(customer.id) %>
     <%= link_to 'x', customer_path(customer.id),:method => :delete %>
   </div>
-  <h1><%= customer.full_name %></h1>
-  <p><%= image_tag customer.image %></p>
+  <h2><%= customer.full_name %></h2>
+  <p><%= image_tag customer.image, :width => '256' %></p>
   <p><strong>Phone: </strong><%= customer.phone_number %></p>
   <p><strong>Email: </strong><%= customer.email_address %></p>
   <p><strong>Notes: </strong><%= customer.notes %></p>
-</section>
+</div>

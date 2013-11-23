@@ -1,4 +1,7 @@
 CustomerRelationManager::Application.routes.draw do
+  match '/finder' => 'finder#index', :as => 'all_customers', :via => :get
+  match '/finder/missing_email' => 'finder#missing_email', :as => 'missing_email', :via => :get
+
   resources :customers
 
 
